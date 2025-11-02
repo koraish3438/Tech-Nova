@@ -1,9 +1,20 @@
-<resources xmlns:tools="http://schemas.android.com/tools">
-    <!-- Base application theme. -->
-    <style name="Base.Theme.Project1" parent="Theme.Material3.DayNight.NoActionBar">
-        <!-- Customize your light theme here. -->
-        <!-- <item name="colorPrimary">@color/my_light_primary</item> -->
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- Base Light/Dark Theme -->
+    <style name="Base.Theme.TechNova" parent="Theme.Material3.DayNight.NoActionBar">
+        <!-- Primary Colors -->
+        <item name="colorPrimary">@color/purple_500</item>
+        <item name="colorPrimaryVariant">@color/purple_700</item>
+        <item name="colorOnPrimary">@color/white</item>
+
+        <!-- Status Bar Color -->
+        <item name="android:statusBarColor">@color/purple_700</item>
+
+        <!-- Material 3 Compatibility -->
+        <item name="android:navigationBarColor">@color/purple_500</item>
     </style>
 
-    <style name="Theme.Project1" parent="Base.Theme.Project1" />
+    <!-- App Theme -->
+    <style name="Theme.TechNova" parent="Base.Theme.TechNova"/>
 </resources>

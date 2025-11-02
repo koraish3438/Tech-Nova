@@ -1,12 +1,16 @@
 plugins {
     alias(libs.plugins.android.application)
     alias(libs.plugins.kotlin.android)
+    id("com.google.devtools.ksp")
 }
 
 android {
     namespace = "com.example.project1"
     compileSdk {
         version = release(36)
+    }
+    buildFeatures {
+        viewBinding = true
     }
 
     defaultConfig {
@@ -46,4 +50,21 @@ dependencies {
     testImplementation(libs.junit)
     androidTestImplementation(libs.androidx.junit)
     androidTestImplementation(libs.androidx.espresso.core)
+    // Retrofit
+    implementation("com.squareup.retrofit2:retrofit:2.9.0")
+    implementation("com.squareup.retrofit2:converter-gson:2.9.0")
+
+    // ViewModel
+    implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.0")
+    implementation("androidx.fragment:fragment-ktx:1.8.2")
+    // LiveData
+    implementation("androidx.lifecycle:lifecycle-livedata-ktx:2.8.0")
+
+    // Glide
+    implementation("com.github.bumptech.glide:glide:4.16.0")
+
+    //room database
+    ksp("androidx.room:room-compiler:2.8.3")
+    implementation("androidx.room:room-runtime:2.8.3")
+    implementation("androidx.room:room-ktx:2.8.3")
 }
